@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import Membership from "./Membership";
 import DetailBar from "./DetailBar";
+import Movie from "./Movie";
+import Whyjoin from "./Whyjoin";
+import FAQ from "./FAQ";
 
 const Main = () => {
   return (
@@ -25,6 +28,9 @@ const Main = () => {
       </div>
       <section>
         <DetailBar />
+        <Movie />
+        <Whyjoin />
+        <FAQ />
       </section>
     </main>
   );
