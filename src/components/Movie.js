@@ -78,17 +78,17 @@ function SamplePrevArrow(props) {
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     responsive: [
+      // {
+      //   breakpoint: 1024,
+      //   settings: {
+      //     slidesToShow: 3,
+      //     slidesToScroll: 3,
+      //     infinite: true,
+      //     dots: false
+      //   }
+      // },
       {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: false
-        }
-      },
-      {
-        breakpoint: 600,
+        breakpoint: 960,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -96,7 +96,7 @@ function SamplePrevArrow(props) {
         }
       },
       {
-        breakpoint: 480,
+        breakpoint: 600,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1
@@ -128,7 +128,7 @@ function SamplePrevArrow(props) {
         selectMovie && (
           <div className="movie-popup">
             <button onClick={()=>{setSelectMovie(null)}}>×</button>
-            {console.log(selectMovie)}
+            {/* {console.log(selectMovie)} */}
             <img src={`https://image.tmdb.org/t/p/w500/${selectMovie.backdrop_path}`}></img>
             <h3>{selectMovie.title}</h3>
             <p>{selectMovie.release_date}</p>

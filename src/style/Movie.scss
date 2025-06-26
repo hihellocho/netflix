@@ -1,6 +1,6 @@
 .movie-card {
   width: 80px;
-  aspect-ratio: 2/3;
+  aspect-ratio: 1/1.4;
   position: relative;
   transition: 0.3s;
   cursor: pointer;
@@ -14,10 +14,10 @@
   }
   p {
     font-size: 100px;
-    font-weight: bolder;
+    font-weight: 800;
     position: absolute;
-    bottom: 10px;
-    left: -0.5rem;
+    bottom: 30px;
+    left: 0.2rem;
     color: $bg-color;
     -webkit-text-stroke: 1px $text-color;
   }
@@ -41,6 +41,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 15;
     cursor: pointer;
     &:hover {
       background-color: #333;
@@ -48,15 +49,25 @@
   }
   .btn-prev {
     left: -50px;
+    @include tablet{left: -10px;}
   }
   .btn-next {
     right: -50px;
+    @include tablet{right: -10px;}
   }
 }
 .movie-popup{
   z-index: 10;
   width: 50%;
   height: 60vh;
+  @include tablet{
+    width: 70%;
+    height: 50vh;
+  }
+  @include mobile{
+    width: 70%;
+    height: 40vh;
+  }
   background-color: rgba(0, 0, 0, 0.8);
   color: $text-color;
   position: fixed;
